@@ -12,7 +12,7 @@ if __name__ == '__main__':
                                 born_location=el.get('born_location'), description=el.get('description'))
                 author.save()
             except NotUniqueError:
-                print(f"Author does exist {el.get('fullname')}")
+                print(f"Author already does exist {el.get('fullname')}!")
 
     with open('quotes.json', encoding='utf-8') as fd:
         data = json.load(fd)
